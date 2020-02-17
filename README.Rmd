@@ -23,7 +23,7 @@ For this, the package mainly consists of two functions:
 
 In addition, there is also a function called `summariseRaster`, which allows a similar implementation to the `summariseNC` function, but using raster files rather than NetCDF files.
 
-There are also two functions (`mergeNC` and `aggregateNC`), which together provide a much faster alternative to the `summariseNC` function, but those functions rely on the Climate Data Operators (CDO) software (https://code.mpimet.mpg.de/projects/cdo). This software needs to be installed if you want to use those two functions in R.
+There are also several functions (`cropNC`, `maskNC`, `mergeNC` and `aggregateNC`), which rely on the Climate Data Operators (CDO) software (https://code.mpimet.mpg.de/projects/cdo). This software needs to be installed if you want to use those functions in R. CDO is much faster than the equivalent R-functions, thus the CDO-based functions are considerably faster than the `subsetNC()` and `summariseNC()` functions.
 
 ## Installation
 

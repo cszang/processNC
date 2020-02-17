@@ -2,7 +2,7 @@ Package: processNC
 Type: Package
 Title: R Package for processing large NetCDF files
 Version: 0.0.1
-Date: 2019-08-12
+Date: 2020-02-17
 Authors@R: 
     person("RS-eco", email = "RS-eco@posteo.de", role = c("cre", "aut"))
 Maintainer: RS-eco <RS-eco@posteo.de>
@@ -26,7 +26,7 @@ Suggests:
     rmarkdown
 License: MIT + file LICENSE
 LazyData: TRUE
-RoxygenNote: 7.0.0
+RoxygenNote: 7.0.2
 NeedsCompilation: no
 Author: RS-eco [cre, aut]
 URL: https://github.com/RS-eco/processNC

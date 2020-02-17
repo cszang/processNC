@@ -27,11 +27,12 @@ In addition, there is also a function called `summariseRaster`, which
 allows a similar implementation to the `summariseNC` function, but using
 raster files rather than NetCDF files.
 
-There are also two functions (`mergeNC` and `aggregateNC`), which
-together provide a much faster alternative to the `summariseNC`
-function, but those functions rely on the Climate Data Operators (CDO)
-software (<https://code.mpimet.mpg.de/projects/cdo>). This software
-needs to be installed if you want to use those two functions in R.
+There are also several functions (`cropNC`, `maskNC`, `mergeNC` and
+`aggregateNC`), which rely on the Climate Data Operators (CDO) software
+(<https://code.mpimet.mpg.de/projects/cdo>). This software needs to be
+installed if you want to use those functions in R. CDO is much faster
+than the equivalent R-functions, thus the CDO-based functions are
+considerably faster than the `subsetNC()` and `summariseNC()` functions.
 
 ## Installation
 
@@ -98,7 +99,7 @@ subsetNC(files, ext=bavaria)
     resolution : 0.9727318, 0.3660113  (x, y)
     extent     : 8.975925, 13.83958, 47.27012, 50.56422  (xmin, xmax, ymin, ymax)
     crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
-    source     : /tmp/RtmpmL1EOH/raster/r_tmp_2019-12-05_150938_9264_44808.grd 
+    source     : /tmp/RtmpVKEGgE/raster/r_tmp_2020-02-17_105901_2929_07848.grd 
     names      : X1979.01.01, X1979.01.02, X1979.01.03, X1979.01.04, X1979.01.05, X1979.01.06, X1979.01.07, X1979.01.08, X1979.01.09, X1979.01.10, X1979.01.11, X1979.01.12, X1979.01.13, X1979.01.14, X1979.01.15, ... 
     min values :    258.5225,    259.2864,    262.5962,    261.2245,    259.8299,    261.2420,    262.6502,    266.7570,    269.9405,    269.7677,    270.7775,    269.8421,    268.8952,    267.8006,    265.1033, ... 
     max values :    265.4785,    262.7227,    265.5797,    263.6797,    261.9867,    263.5001,    265.7485,    270.3293,    273.8665,    272.1921,    272.2344,    271.9499,    270.9982,    269.5755,    267.8779, ... 
